@@ -8,7 +8,7 @@ class dfParams extends CBitrixComponent
 	{
 		$arResult = array();
 		foreach ($arParams as $i => $item) {
-			if (stripos($i, 'DF_') !== false) {
+			if (stripos($i, 'DF_') !== false && $item) {
 				$arItem = explode('_', $i);
 				$arResult['ITEMS'][end($arItem)][$arItem[1]] = $item;
 			}
