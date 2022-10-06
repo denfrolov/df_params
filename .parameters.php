@@ -4,6 +4,7 @@
 $arComponentParameters = array();
 
 if ($arCurrentValues) {
+	unset($arCurrentValues['COMPONENT_TEMPLATE']);
 	$c = array_key_last($arCurrentValues);
 	$c = explode('_', $c);
 	$c = end($c) + 1;
